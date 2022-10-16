@@ -93,3 +93,111 @@ fetch("https://digimon-api.vercel.app/api/digimon")
   9. Lalu klik merge pull request
   10. Lalu kembali ke git, dan kembali ke dev -> git switch dev
   11. Kemudian masukan kodingan -> git pull
+## Responsive Web
+- Bertujuan membuat desain website kita dapat diakses dalam device apapun
+- Cara untuk membuat web responsive bermacam-macam :
+  1. meta viewport
+  2. max-width
+  3. relative unit
+  4. media query
+  5. flex
+  6. grid
+### meta viewport
+- Viewport : area web yg dapat diakses oleh user
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />  //ini adalah meta viewport
+    <title>Document</title>
+  </head>
+```
+- tetapi, Cara dengan viewport kurang efektif/responsive
+### max-width
+```html
+//menambah gambar agar responsive
+//index.html
+<img src="aku.jpg" alt="">
+```
+```html
+//style.css
+img{
+  width: 100%;
+}  //maka output gambar, akan sebesar 100% dari layar
+``` 
+### relativ unit
+- macam-macam relative unit, diantaranya :
+  1. em : relative pada ukuran huruf parent terdekatnya
+    ```html
+     //index.html
+      <p class="rem">hallo ini dari rem</p>
+
+    .em {
+      font-size: 2em;
+    } //maka output font-size em = sebesar 40px
+    ```
+  2. rem: relative pada ukuran huruf dari root element
+    - Ukuran root html, kebanyakan 16px
+    ```html
+    //index.html
+    <p class="em">hallo ini dari em</p>
+
+    //style.css
+    .rem {
+    font-size: 2rem;
+    } //maka, output dari font 2 rem ini = sebesar 32px 
+    ```
+  3. vw: ukuran tinggi dari viewport
+    - 1vw = 1% dari ukuran viewport
+  4. vh : mengatur tinggi layar
+  5. % : mengambil ukuran parentnya
+### Media query
+- Media query : mengatur beberapa styling tegantung pada jenis device tertentu
+- Media query => @media ()
+```html
+@media (max-width: 600px ) {
+    .menu {
+      display: none;
+    }
+```
+## Bootstrap
+- diciptakan oleh programmer twitter, yaitu : Mark Octo dan Jacob Thornton
+- menggunakan bootstrap Lebih powerfull, menghemat waktu
+- Cara menggunakan bootstrap 
+  1. compile css dan java script 
+  2. dari source files (di download)
+  3. CDN (di copy paste)
+  4. download menggunakan npm
+### Menggunakan CDN
+- Pasang di dalam doctype
+- Pakai bootstrap beda fontnya
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  </head>
+```
+### Layout
+- Layout : sesuatu yang berhubungan dengan styling
+### Breakpoint
+- Breakpoint : patahan atau tampilan jika diperkecil/ perbesar
+### Container
+- Container : fundamental jika ingin  melakukan sebuah layout
+- Container adalah layout basic bootstrap, dibutuhkan jika ingin menggunakann system grid pada bootstrap
+### System grid
+- System grid : Menyediakan sebesar 12 kolom system
+- system grid Menggunakan container, rows, columns untuk mengatur layout dan posisi dari kontennya
+- Dibuat menggunakan flex-box dan responsive
+- Col biasa : akan mengambil seperti saudaranya, sebesar 4 (dibagi rata)
+
+
