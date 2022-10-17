@@ -1,14 +1,14 @@
 # Writing-Week-4
-## Async await, Promises, Fetch
-- Prosesnya :
+- ### Async await, Promises, Fetch
+  - Prosesnya :
   - front-end -> API -> (server -> database) backend 
-- API adalah jembatan komunikasi ke server untuk mendapatkan data
-- data yang dikirim dan diterima oleh API dalam bentuk JSON (JavaScript Object Notation)
-- ciri-ciri json : setiap property ada tanda kutipnya
+  - API adalah jembatan komunikasi ke server untuk mendapatkan data
+  - data yang dikirim dan diterima oleh API dalam bentuk JSON (JavaScript Object Notation)
+  - ciri-ciri json : setiap property ada tanda kutipnya
 
-### promises
-- API menggunakan promises
-- kodingan promises  menggunakan : .namaPromises .then() .catch() 
+- ### promises
+  - API menggunakan promises
+  - kodingan promises  menggunakan : .namaPromises .then() .catch() 
 - contoh
 ```js
 //object promises
@@ -32,7 +32,7 @@ nonton("jalan") .then(result => {
     console.log(err)
   })
 ```
-### async await
+- ### async await
 ```js
 //async await
 //buat async function
@@ -54,7 +54,7 @@ async function asyncNonton() {
   }
   asyncNonton()
 ```
-### fetch
+- ### fetch
 - fetch merupakan object promises 
 - fetch di handle menggunakan promises dan async await
 ```js
@@ -67,8 +67,8 @@ fetch("https://digimon-api.vercel.app/api/digimon")
     console.log(result)
   })
 ```
-## git dan github lanjutan
-### berkolaborasi menggunakan github
+- ### git dan github lanjutan
+- ### berkolaborasi menggunakan github
 - misal : A (team leader) membuat login, dan B (anggota) membuat register
 - Langkah-langkah di github :
   1. buat repository organization, lalu invite anggota tim di fitur people, kemudian jadikan owner
@@ -93,7 +93,7 @@ fetch("https://digimon-api.vercel.app/api/digimon")
   9. Lalu klik merge pull request
   10. Lalu kembali ke git, dan kembali ke dev -> git switch dev
   11. Kemudian masukan kodingan -> git pull
-## Responsive Web
+- ### Responsive Web
 - Bertujuan membuat desain website kita dapat diakses dalam device apapun
 - Cara untuk membuat web responsive bermacam-macam :
   1. meta viewport
@@ -102,7 +102,7 @@ fetch("https://digimon-api.vercel.app/api/digimon")
   4. media query
   5. flex
   6. grid
-### meta viewport
+- ### meta viewport
 - Viewport : area web yg dapat diakses oleh user
 ```html
 <!DOCTYPE html>
@@ -115,7 +115,7 @@ fetch("https://digimon-api.vercel.app/api/digimon")
   </head>
 ```
 - tetapi, Cara dengan viewport kurang efektif/responsive
-### max-width
+- ### max-width
 ```html
 //menambah gambar agar responsive
 //index.html
@@ -127,7 +127,7 @@ img{
   width: 100%;
 }  //maka output gambar, akan sebesar 100% dari layar
 ``` 
-### relativ unit
+- ### relativ unit
 - macam-macam relative unit, diantaranya :
   1. em : relative pada ukuran huruf parent terdekatnya
     ```html
@@ -150,28 +150,28 @@ img{
     } //maka, output dari font 2 rem ini = sebesar 32px 
     ```
   3. vw: ukuran tinggi dari viewport
-    - 1vw = 1% dari ukuran viewport
+  - 1vw = 1% dari ukuran viewport
   4. vh : mengatur tinggi layar
   5. % : mengambil ukuran parentnya
-### Media query
-- Media query : mengatur beberapa styling tegantung pada jenis device tertentu
-- Media query => @media ()
+- ### Media query
+  - Media query : mengatur beberapa styling tegantung pada jenis device tertentu
+  - Media query => @media ()
 ```html
 @media (max-width: 600px ) {
     .menu {
       display: none;
     }
 ```
-## Bootstrap
-- diciptakan oleh programmer twitter, yaitu : Mark Octo dan Jacob Thornton
-- menggunakan bootstrap Lebih powerfull, menghemat waktu
-- Cara menggunakan bootstrap 
-  1. compile css dan java script 
-  2. dari source files (di download)
-  3. CDN (di copy paste)
-  4. download menggunakan npm
-### Menggunakan CDN
-- Pasang di dalam doctype
+- ### Bootstrap
+  - diciptakan oleh programmer twitter, yaitu : Mark Octo dan Jacob Thornton
+  - menggunakan bootstrap Lebih powerfull, menghemat waktu
+  - Cara menggunakan bootstrap 
+   1. compile css dan java script 
+   2. dari source files (di download)
+   3. CDN (di copy paste)
+   4. download menggunakan npm
+- ### Menggunakan CDN
+  - Pasang di dalam doctype
 - Pakai bootstrap beda fontnya
 ```html
 <!DOCTYPE html>
@@ -187,17 +187,17 @@ img{
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
   </head>
 ```
-### Layout
-- Layout : sesuatu yang berhubungan dengan styling
-### Breakpoint
-- Breakpoint : patahan atau tampilan jika diperkecil/ perbesar
-### Container
-- Container : fundamental jika ingin  melakukan sebuah layout
-- Container adalah layout basic bootstrap, dibutuhkan jika ingin menggunakann system grid pada bootstrap
-### System grid
-- System grid : Menyediakan sebesar 12 kolom system
-- system grid Menggunakan container, rows, columns untuk mengatur layout dan posisi dari kontennya
-- Dibuat menggunakan flex-box dan responsive
-- Col biasa : akan mengambil seperti saudaranya, sebesar 4 (dibagi rata)
+- ### Layout
+  - Layout : sesuatu yang berhubungan dengan styling
+- ### Breakpoint
+  - Breakpoint : patahan atau tampilan jika diperkecil/ perbesar
+- ### Container
+  - Container : fundamental jika ingin  melakukan sebuah layout
+  - Container adalah layout basic bootstrap, dibutuhkan jika ingin menggunakann system grid pada bootstrap
+- ### System grid
+  - System grid : Menyediakan sebesar 12 kolom system
+  - system grid Menggunakan container, rows, columns untuk mengatur layout dan posisi dari kontennya
+  - Dibuat menggunakan flex-box dan responsive
+  - Col biasa : akan mengambil seperti saudaranya, sebesar 4 (dibagi rata)
 
 
